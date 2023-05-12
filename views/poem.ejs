@@ -1,0 +1,62 @@
+<%- include('layout.ejs'); %>
+<div class="container">
+<div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <h2>My Portfolio</h2>  
+                        <div class="card">
+                            <div class="card-header text-center">Add a new Poem</div>
+                            <div class="card-body">
+
+                                <form class="form-horizontal" method="post" action="/poem">
+                                    <div class="form-group">
+                                        <label for="title" class="cols-sm-2 control-label">Title</label>
+                                        <div class="cols-sm-10">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                                                <input type="text" class="form-control" name="title" id="title" placeholder="What is HTML?" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="url" class="cols-sm-2 control-label">Image URL</label>
+                                        <div class="cols-sm-10">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                                                <input type="text" class="form-control" name="url" id="url" placeholder="http://image url" />
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="poem" class="cols-sm-2 control-label">Poem </label>
+                                        <div class="cols-sm-10">
+                                            <div class="input-group">
+                                                <!-- <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span> -->
+                                                <textarea class="form-control" name="poem" id="poem" placeholder="Write your poem here" style="width: 100%;" ></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group ">
+                                        <button type="submit" class="btn btn-primary btn-lg btn-block login-button">Save</button>
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+</div>
+
+<script>
+    tinymce.init({
+  selector: 'textarea',  // change this value according to your HTML
+  plugin: 'a_tinymce_plugin',
+  a_plugin_option: true,
+  a_configuration_option: 400
+});
+
+</script>
+</body>
+</html>

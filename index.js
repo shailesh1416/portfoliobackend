@@ -31,6 +31,7 @@ app.use(passport.session());
 //Routes
 app.use("/", require("./routes/login"));
 app.use("/blog", require("./routes/blog"));
+app.use("/poem", require("./routes/poem"));
 
 
 const PORT = process.env.PORT || 4111;
