@@ -35,7 +35,7 @@ const uploadBlog = (req, res) => {
 
 const getBlogs = async (req, res) => {
     try {
-        const data = await Blog.find();
+        const data = await Blog.find({}, { title: 1,_id:1});
         res.json(data);
       } catch (err) {
         console.error(err);
