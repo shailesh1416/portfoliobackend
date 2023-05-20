@@ -12,15 +12,16 @@ const poemView = (req, res) => {
 
 //Post Request that handles new blog upload
 const uploadPoem = (req, res) => {
-    const { title, url, poem } = req.body;
-    if (!title || !poem) {
+    const { title, url, hindi,hinglish } = req.body;
+    if (!title || !hindi || !hinglish) {
         console.log("Fill empty fields");
     } else {
         //Validation
         const newPoem = new Poem({
             title,
             url,
-            poem,
+            hindi,
+            hinglish
         });
 
         newPoem.save().then(res.redirect("/poem"))

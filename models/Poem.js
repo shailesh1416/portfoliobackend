@@ -8,11 +8,16 @@ const UserSchema = new mongoose.Schema({
     type: String,
     required: false,
   },
-  poem: {
+  hindi: {
     type: String,
     required: true,
   },
-  date: {
+  hinglish: {
+    type: String,
+    required: true,
+  },
+  date:
+   {
     type: Date,
     default: Date.now,
   },
