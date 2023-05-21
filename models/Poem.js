@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const UserSchema = new mongoose.Schema({
+const PoemSchema = new mongoose.Schema({
   title: {
     type: String,
     required: true,
@@ -22,5 +22,5 @@ const UserSchema = new mongoose.Schema({
     default: Date.now,
   },
 });
-const Poem = mongoose.model("Poem", UserSchema);
+const Poem = mongoose.model("Poem", PoemSchema);
 module.exports = Poem;

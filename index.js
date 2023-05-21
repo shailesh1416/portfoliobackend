@@ -33,6 +33,7 @@ app.use(passport.session());
 //Routes
 app.use("/", require("./routes/login"));
 app.use("/blog", require("./routes/blog"));
+app.use("/photo", require("./routes/photo"));
 app.use("/poem", require("./routes/poem"));
 
 

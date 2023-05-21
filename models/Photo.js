@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const BlogSchema = new mongoose.Schema({
+const PhotoSchema = new mongoose.Schema({
   title: {
     type: String,
     required: true,
@@ -8,7 +8,11 @@ const BlogSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  blog: {
+  description: {
+    type: String,
+    required: true,
+  },
+  place: {
     type: String,
     required: true,
   },
@@ -17,5 +21,5 @@ const BlogSchema = new mongoose.Schema({
     default: Date.now,
   },
 });
-const Blog = mongoose.model("Blog", BlogSchema);
-module.exports = Blog;
+const Photo = mongoose.model("Photo", PhotoSchema);
+module.exports = Photo;
