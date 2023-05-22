@@ -44,7 +44,7 @@ const getPhotos = async (req, res) => {
 const getOnePhoto = async (req, res) => {
     try {
         const { id } = req.params;
-        const data = await Blog.findById(id);
+        const data = await Photo.findById(id);
         // console.log(data)
         res.json(data);
       } catch (err) {
